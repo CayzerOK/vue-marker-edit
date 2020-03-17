@@ -1,0 +1,36 @@
+.videoLoader {
+    .playersWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .itemWrapper {
+            margin: 0 2px;
+            .controls {
+                position: relative;
+                img {
+                    position: absolute;
+                    cursor: pointer;
+                    width: 28px;
+                    left: 7px;
+                    top: 7px;
+                }
+            }
+        }
+    }
+    .videoInput {
+        text-align: center;
+        .loadbtn {
+            color: white;
+            background: #e7993f;
+            border-radius: 14px;
+            padding: 3px 20px;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 4px;
+            margin-bottom: 10px;
+        }
+    }
+}

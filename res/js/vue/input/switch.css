@@ -1,0 +1,103 @@
+.onoffswitch {
+    align-self: center;
+    z-index: 100;
+    position: relative; width: 59px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 30px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 26px; padding: 0; line-height: 26px;
+    font-size: 17px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 14px;
+    background-color: #EEA747; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 14px;
+    background-color: #EEA747; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 30px; margin: -2px;
+    background: #FF8000;
+    position: absolute; top: 0; bottom: 0;
+    right: 29px;
+    border: 2px solid #FFFFFF; border-radius: 30px;
+    transition: all 0.1s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.switchWrapper {
+    display: flex;
+    justify-content: center;
+    .switchItem {
+        cursor: pointer;
+        align-self: baseline;
+        position: relative;
+        font-size: 16px;
+        text-align: center;
+        padding: 0px 40px;
+        width: 120px;
+        text-wrap: none;
+        line-height: 24px;
+        height: 24px;
+        border-radius: 20px;
+        top: 2px;
+        color: #EEA747;
+        border: 1px solid;
+    }
+    .active {
+        cursor: unset !important;
+        background: #EEA747 !important;
+        color: white !important;
+        border: none !important;
+        height: 26px !important;
+    }
+    .left {
+        right: -25px;
+    }
+    .right {
+        left: -25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .switchWrapper {
+        justify-content: space-evenly;
+        height: 76px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .onoffswitch {
+        display: none;
+    }
+    .left {
+        left: unset !important;
+        right: unset !important;
+    }
+    .right {
+        left: unset !important;
+        right: unset !important;
+
+    }
+}

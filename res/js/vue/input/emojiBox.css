@@ -1,0 +1,26 @@
+.sm {
+    display: block;
+    margin: auto;
+}
+.emoji {
+    cursor: pointer;
+    width: 45px;
+    overflow: hidden;
+}
+
+.emojibox {
+    top: 0;
+    left: -78px;
+    background: white;
+    position: absolute;
+    display: flex;
+    width: 245px;
+    flex-wrap: wrap;
+    border: 1px solid wheat;
+}
+
+.emojiItem {
+    cursor: pointer;
+    margin: 5px 2px;
+    width: 45px;
+}

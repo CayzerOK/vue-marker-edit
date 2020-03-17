@@ -1,0 +1,83 @@
+.mapPicker {
+    .mapTitle {
+        margin-top: 20px;
+        position: relative;
+        color: #e6963f;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 3px;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 6px;
+        width: max-content;
+    }
+    .coords {
+        position: relative;
+        cursor: pointer;
+        box-sizing: border-box;
+        outline: none;
+        padding: 2px 20px;
+        font-size: 12px;
+        width: max-content;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        color: #9e9e9e;
+        border: 1px solid #9e9e9e;
+        background: white;
+        border-radius: 32px;
+        font-weight: 600;
+        .clearBTN {
+            background: #9e9e9e;
+            border-radius: 17px;
+            text-align: center;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+            color: white;
+            line-height: 13px;
+            right: -25px;
+            bottom: 0px;
+            font-size: 8px;
+            padding: 2px;
+        }
+    }
+    .mapWrapper {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        text-align: center;
+        background: #0000006e;
+        #pickerMap {
+            width: 60%;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .saveWrapper {
+            width: 60%;
+            margin: 0 auto;
+            background: white;
+            .savebtn {
+                color: white;
+                background: #e7993f;
+                border-radius: 14px;
+                padding: 3px 20px;
+                white-space: nowrap;
+                cursor: pointer;
+                font-size: 16px;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px;
+            }
+        }
+    }
+}

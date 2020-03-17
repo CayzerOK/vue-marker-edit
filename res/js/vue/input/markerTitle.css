@@ -1,0 +1,25 @@
+.titleWrapper {
+    position: relative;
+    .titleError {
+        position: absolute;
+        color: red;
+        right: 4%;
+        top: -21px;
+    }
+    .titleInput {
+        margin: 0 0 10px 2px;
+        resize: none;
+        width: 96%;
+        padding: 7px;
+        font-size: 16px;
+        border: none;
+        box-shadow: 0 0 4px #9e9e9e;
+        border-radius: 2px;
+        font-weight: 600;
+        color: #4f4f4f;
+    }
+    .titleInput::placeholder {
+        font-size: 14px;
+        font-style: normal;
+    }
+}

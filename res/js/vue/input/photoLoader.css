@@ -1,0 +1,107 @@
+@keyframes loading {
+    0% {
+        background: linear-gradient(90deg, #ffaf2b 0%, #ffc11e 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, #ffc11e 0%, #ffaf2b 100%);
+    }
+    100% {
+        background: linear-gradient(90deg, #ffaf2b 0%, #ffc11e 100%);
+    }
+}
+
+.photoInput {
+    display: none;
+}
+.inputWrapper {
+    text-align: center;
+    padding: 4px;
+    .loadbtn {
+        margin-bottom: 20px;
+        color: white;
+        background: #e7993f;
+        border-radius: 14px;
+        padding: 3px 20px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 4px;
+    }
+    label {
+        color: #ffc11e;
+    }
+    div {
+        color: #ffc11e;
+        animation: loading 0.3s infinite;
+    }
+}
+
+.imgWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .preview {
+        position: relative;
+        margin: 4px;
+
+        .prevImg {
+            height: 150px;
+            object-fit: contain;
+        }
+        .controls {
+            position: absolute;
+            opacity: 0.0;
+            transition: opacity 0.2s;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            img {
+                cursor: pointer;
+                width: 25px;
+                margin: 5px 1px;
+                border-radius: 20px;
+                background: #ffffffd1;
+                box-shadow: 0 0 8px 1px white;
+            }
+        }
+        .imgText {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 3%;
+            width: 94%;
+            height: 140px;
+            z-index: 0;
+            font-size: 16px;
+            opacity: 0.0;
+            word-break: break-word;
+            transition: opacity 0.2s;
+            background: linear-gradient(180deg,#f5f5f5c4,#f7f7f730);
+        }
+        .imgTextWrapper {
+            .imgTextarea {
+                max-width: 100%;
+                position: absolute;
+                top: 10px;
+                resize: none;
+                padding: 10px;
+                width: 130px;
+                height: 110px;
+                z-index: 1000;
+                font-size: 14px;
+                border: 1px solid #b9b9b9;
+            }
+        }
+    }
+    .preview:hover>.controls, .preview:active>.controls, .preview:hover>.imgText, .preview:active>.imgText {
+        opacity: 1;
+    }
+}
+
+.preview:first-child > .prevImg {
+    border: 2px solid #ffaf2b;
+}
+
